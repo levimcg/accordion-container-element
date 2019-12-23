@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Accordion Container Element</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+      line-height: 1.5;
+      margin: 0;
+      padding: 4rem;
+    }
+  </style>
+</head>
+<body>
+  <h1 style="margin-bottom: 4rem;">Accordion Container Element</h1>
+
+  <accordion-container>
+    <h2 data-accordion-summary>Panel one summary</h2>
+    <div data-accordion-panel>
+      <p>
+        Panel one content...
+      </p>
+      <form action="">
+        <label for="name">Name</label>
+        <input type="text" id="name">
+      </form>
+    </div>
+    <h3 data-accordion-summary>Panel two summary</h3>
+    <div data-accordion-panel>
+      <p>
+        Panel two content...
+      </p>
+      <ul>
+        <li>Item one</li>
+        <li>Item two</li>
+        <li>Item three</li>
+      </ul>
+    </div>
+    <h2 data-accordion-summary>Panel three summary</h2>
+    <div data-accordion-panel>
+      Panel three content...
+      <label for="choice">Select one</label>
+      <select name="" id="choice">
+        <option value="">One</option>
+        <option value="Two">Two</option>
+      </select>
+    </div>
+  </accordion-container>
+  
+  <script type="module" src="../index.js"></script>
+</body>
+</html>

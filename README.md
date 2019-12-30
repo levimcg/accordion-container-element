@@ -65,3 +65,10 @@ document.addEventListener('accordion-container-toggled', () => {
 
 ## About bundling polyfils, etc.
 This element is written in standard ES2017 and does not come transpiled or polyfilled in any way. Depending on your use case and browser support needs you may wish to use the [webcomponentsjs](https://github.com/webcomponents/polyfills/tree/master/packages/webcomponentsjs) polyfill.
+
+## Development
+To start a local development server that serves the `demo/` folder and watches for changes to `index.js` run the following command in your terminal while in at the root of the repository.
+
+```bash
+npm start
+```

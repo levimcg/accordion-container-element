@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "description": "A generic web component wrapper that turns some headings and other content into an accordion",
   "main": "index.js",
+  "module": "index.js",
   "scripts": {
     "start": "es-dev-server --app-index demo/index.html --node-resolve --open --watch"
   },

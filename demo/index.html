@@ -5,21 +5,37 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Accordion Container Element</title>
-  <style>
-    * {
-      box-sizing: border-box;
-    }
-    
-    body {
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-      line-height: 1.5;
-      margin: 0;
-      padding: 4rem;
-    }
-  </style>
+  <link rel="stylesheet" href="./demo.css">
 </head>
 <body>
-  <h1 style="margin-bottom: 4rem;">Accordion Container Element</h1>
+  <h1>Accordion Container Element</h1>
+  
+  <h2>Styled example</h2>
+  
+  <accordion-container>
+    <h2 class="accordion-summary" data-accordion-summary>Panel one summary</h2>
+    <div class="accordion-panel" data-accordion-panel>
+      <p>Ea sint corrupti ducimus soluta necessitatibus aut ullam et neque. Dolor aliquam earum ut. Itaque doloremque
+        sequi non vel. Dolor quas itaque. Iste veritatis vel in voluptas aut dolores hic. Dolore illum at.</p>
+    </div>
+    <h2 class="accordion-summary" data-accordion-summary>Panel two summary</h2>
+    <div class="accordion-panel" data-accordion-panel>
+      <p>Ea sint corrupti ducimus soluta necessitatibus aut ullam et neque. Dolor aliquam earum ut. Itaque doloremque
+        sequi non vel. Dolor quas itaque. Iste veritatis vel in voluptas aut dolores hic. Dolore illum at.</p>
+      <ul>
+        <li>Item one</li>
+        <li>Item two</li>
+        <li>Item three</li>
+      </ul>
+    </div>
+    <h2 class="accordion-summary" data-accordion-summary>Panel three summary</h2>
+    <div class="accordion-panel" data-accordion-panel>
+      <p>Ea sint corrupti ducimus soluta necessitatibus aut ullam et neque. Dolor aliquam earum ut. Itaque doloremque
+        sequi non vel. Dolor quas itaque. Iste veritatis vel in voluptas aut dolores hic. Dolore illum at.</p>
+    </div>
+  </accordion-container>
+  
+  <h2>Default un-styled example</h2>
 
   <accordion-container>
     <h2 data-accordion-summary>Panel one summary</h2>
@@ -32,7 +48,7 @@
         <input type="text" id="name">
       </form>
     </div>
-    <h3 data-accordion-summary>Panel two summary</h3>
+    <h2 data-accordion-summary>Panel two summary</h2>
     <div data-accordion-panel>
       <p>
         Panel two content...
@@ -53,7 +69,7 @@
       </select>
     </div>
   </accordion-container>
-  
+
   <script type="module" src="../index.js"></script>
 </body>
 </html>

@@ -105,10 +105,10 @@ export default class AccordionContainerElement extends HTMLElement {
         }
         break;
       case keys.home:
-        toggles[firstToggle].focus();
+        firstToggle.focus();
         break;
       case keys.end:
-        toggles[lastToggle].focus();
+        lastToggle.focus();
         break;
       default:
         break;

@@ -117,5 +117,5 @@ export default class AccordionContainerElement extends HTMLElement {
 }
 
 if ('customElements' in window) {
-  window.customElements.define("accordion-container", AccordionContainerElement);
+  window.customElements.define('accordion-container', AccordionContainerElement);
 }

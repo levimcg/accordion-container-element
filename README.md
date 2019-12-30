@@ -43,3 +43,24 @@ When the accordion container is connected to the DOM the headings inside will be
   </div>
 </accordion-container>
 ```
+
+## Events
+The accordion container emits one `CustomEvent` called `accordion-container-toggled`. The custom event has a `detail` object with the following keys/values:
+
+- `event.detail.toggle` - The summary toggle button that will be toggled if the event is not canceled.
+- `event.detail.panel` - The corresponding panel that will be toggled if the event is not canceled.
+
+Example:
+
+```js
+document.addEventListener('accordion-container-toggled', () => {
+  if (event.detail.toggle.textContent == 'Panel two summary') {
+    console.log('Second panel!');
+
+    // Do stuff only if the second accordion panel was toggled
+  }
+});
+```
+
+## About bundling polyfils, etc.
+This element is written in standard ES2017 and does not come transpiled or polyfilled in any way. Depending on your use case and browser support needs you may wish to use the [webcomponentsjs](https://github.com/webcomponents/polyfills/tree/master/packages/webcomponentsjs) polyfill.

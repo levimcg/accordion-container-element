@@ -61,7 +61,7 @@ export default class AccordionContainerElement extends HTMLElement {
     if (!toggle) return;
     
     const panel = toggle.parentElement.nextElementSibling;
-    const eventShouldFire = toggle.dispatchEvent(
+    const eventShouldFire = this.dispatchEvent(
       new CustomEvent('accordion-container-toggled', {
         bubbles: true,
         cancelable: true,

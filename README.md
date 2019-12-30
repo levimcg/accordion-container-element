@@ -1,8 +1,9 @@
 # Accordion Container Element
-An accessible custom element wrapper that adds accordion functionality with keyboard support to a group of headings and panels. Inspired by Github's [tab-container-element](https://github.com/github/tab-container-element). Follows the [ARIA Authoring Practices recommendations for accordions](https://w3c.github.io/aria-practices/#accordion).
+An accessible [Custom Element](https://developer.mozilla.org/en-US/docs/Web/Web_Components/Using_custom_elements) wrapper that adds accordion functionality with keyboard support to a group of headings and panels. Inspired by Github's [tab-container-element](https://github.com/github/tab-container-element). Follows the [ARIA Authoring Practices recommendations for accordions](https://w3c.github.io/aria-practices/#accordion).
 
 ## Using the Accordion Container Element
-If you want to use it inside a JS module, you can import the accordion container.
+If you want to use it inside a JS module, you can import the accordion container. The accordion container element defines itself using `windown.customElements.define()`, so you will not need to use any kind of named import.
+
 ```js
 import 'accordion-container-element';
 ```

@@ -1,7 +1,7 @@
 {
   "name": "accordion-container-element",
   "version": "0.1.0",
-  "description": "A generic web component wrapper that turns some headings and other content into an accordion",
+  "description": "A generic Custom Element wrapper that turns some headings and other content into an accordion",
   "main": "index.js",
   "module": "index.js",
   "scripts": {
@@ -11,5 +11,8 @@
   "license": "MIT",
   "devDependencies": {
     "es-dev-server": "^1.32.0"
-  }
+  },
+  "files": [
+    "index.js"
+  ]
 }

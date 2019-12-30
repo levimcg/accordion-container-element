@@ -25,6 +25,7 @@ By default, the accordion container element has no styling so that you can apply
 1. All "summaries" must be a heading (h1-h6) and have a `data-summary` attribute.
 1. All "panels" can be (almost) any HTML element, but must have a `data-accordion-panel` attribute.
 
+### 💪 Progressive enhancement
 When the accordion container is connected to the DOM the headings inside will be progressively enhanced by wrapping the heading's `textContent` with a button used for toggling the visibility of each panel. This means that if there's an error loading the script or JavaScript is not available for some reason, all the accordion content will still be accessible as some regular headings and text. 🙌
 
 ```html

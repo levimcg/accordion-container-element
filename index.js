@@ -1,3 +1,9 @@
+/**!
+ * accordion-container-element - 0.1.0
+ * Copyright (C) 2019 Levi McGranahan
+ * MIT License
+ */
+
 const accordionToggles = [
   'h1 > button[aria-expanded]',
   'h2 > button[aria-expanded]',

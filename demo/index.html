@@ -71,5 +71,14 @@
   </accordion-container>
 
   <script type="module" src="../index.js"></script>
+  
+  <script>
+    document.addEventListener('accordion-container-toggled', () => {
+      if (event.detail.toggle.textContent == 'Panel two summary') {
+        console.log('Second panel!');
+      }
+      console.log(event.detail.toggle, event.detail.panel)
+    });
+  </script>
 </body>
 </html>

@@ -59,9 +59,22 @@ export default class AccordionContainerElement extends HTMLElement {
   _handleClick(event) {
     const toggle = event.target.closest(accordionToggles);
     if (!toggle) return;
+    
+    const panel = toggle.parentElement.nextElementSibling;
+    const eventShouldFire = toggle.dispatchEvent(
+      new CustomEvent('accordion-container-toggled', {
+        bubbles: true,
+        cancelable: true,
+        detail: {
+          toggle,
+          panel
+        }
+      })
+    );
+    if (!eventShouldFire) return;
+    
     const isExpanded = toggle.getAttribute('aria-expanded') == 'true' ? true : false;
     toggle.setAttribute('aria-expanded', !isExpanded);
-    const panel = toggle.parentElement.nextElementSibling;
     isExpanded ?
       panel.setAttribute('hidden', '') :
       panel.removeAttribute('hidden');

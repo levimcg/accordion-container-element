@@ -24,7 +24,7 @@ export default class AccordionContainerElement extends HTMLElement {
   
   upgradeHeadings() {
     const headings = Array.from(
-      this.querySelectorAll('[data-accordion-summary]')
+      this.querySelectorAll('[data-summary]')
     );
     //Loop through all the headings and insert a toggle button inside
     headings.forEach(heading => {
@@ -39,7 +39,7 @@ export default class AccordionContainerElement extends HTMLElement {
 
   upgradePanels() {
     const panels = Array.from(
-      this.querySelectorAll('[data-accordion-panel]')
+      this.querySelectorAll('[data-panel]')
     );
     panels.forEach(panel => panel.setAttribute('hidden', ''));
   }

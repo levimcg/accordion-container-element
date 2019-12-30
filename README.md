@@ -15,21 +15,21 @@ or, you can use it in a regular script tag with the `module` attribute.
 ```
 By default, the accordion container element has no styling so that you can apply styles however they wish. There are only a couple of requirements for the way the markup inside must be structured.
 
-1. All "summaries" must be a heading (h1-h6) and have a `data-accordion-summary` attribute.
+1. All "summaries" must be a heading (h1-h6) and have a `data-summary` attribute.
 1. All "panels" can be (almost) any HTML element, but must have a `data-accordion-panel` attribute.
 
 ```html
 <accordion-container>
-  <h2 data-accordion-summary>Panel one summary</h2>
-  <div data-accordion-panel>
+  <h2 data-summary>Panel one summary</h2>
+  <div data-panel>
     <p>Panel one content...</p>
   </div>
-  <h2 data-accordion-summary>Panel two summary</h2>
-  <div data-accordion-panel>
+  <h2 data-summary>Panel two summary</h2>
+  <div data-panel>
     <p>Panel two content...</p>
   </div>
-  <h2 data-accordion-summary>Panel three summary</h2>
-  <div data-accordion-panel>
+  <h2 data-summary>Panel three summary</h2>
+  <div data-panel>
     <p>Panel three content...</p>
   </div>
 </accordion-container>

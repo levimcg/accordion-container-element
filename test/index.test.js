@@ -49,12 +49,17 @@ describe('Accordion container element', () => {
   });
   
   describe('Interactions', () => {
-    it('Toggles panel when button is clicked', async () => {
+    it('Toggles panel and fires customEvent when button is clicked', async () => {
       const el = await fixture(defaultFixutre);
       const button = el.querySelector('[data-summary] > button');
       const panel = el.querySelector('[data-panel]');
       // Panel should be hidden/not expanded by default
       expect(button.getAttribute('aria-expanded')).equal('false');
+      
+      let eventCounter = 0;
+      document.addEventListener('accordion-container-toggled', event => {
+        eventCounter++;
+      });
 
       // Panel is shown and button is set to expanded
       button.click();
@@ -65,27 +70,51 @@ describe('Accordion container element', () => {
       button.click();
       expect(panel.hidden);
       expect(button.getAttribute('aria-expanded')).equal('false');
+      
+      // Custom event should have been fired twice
+      expect(eventCounter).equal(2);
     });
     
     it('Down arrow key cycles focus', async () => {
       const el = await fixture(defaultFixutre);
       const toggles = el.querySelectorAll('[data-summary] > button');
       toggles[0].focus();
-
-      // document.addEventListener('keydown', event => {
-      //   if (event.code == 'ArrowDown') {
-      //     console.log(event.target);
-      //   }
-      // });
       
-      toggles[0].dispatchEvent(
-        new KeyboardEvent('keydown', {
-          code: 'ArrowDown',
-          bubbles: true
-        })
-      );
+      const downKeyEvent = new KeyboardEvent('keydown', {
+        keyCode: 40,
+        bubbles: true
+      });
 
+      toggles[0].dispatchEvent(downKeyEvent);
       expect(toggles[1]).equal(document.activeElement);
+      
+      toggles[1].dispatchEvent(downKeyEvent);
+      expect(toggles[2]).equal(document.activeElement);
+      
+      // If down key is pressed on last toggle focus should return to first
+      toggles[2].dispatchEvent(downKeyEvent);
+      expect(toggles[0]).equal(document.activeElement);
+    });
+    
+    it('Down up arrow key cycles focus', async () => {
+      const el = await fixture(defaultFixutre);
+      const toggles = el.querySelectorAll('[data-summary] > button');
+      toggles[0].focus();
+
+      const upKeyEvent = new KeyboardEvent('keydown', {
+        keyCode: 38,
+        bubbles: true
+      });
+
+      toggles[0].dispatchEvent(upKeyEvent);
+      expect(toggles[2]).equal(document.activeElement);
+
+      toggles[2].dispatchEvent(upKeyEvent);
+      expect(toggles[1]).equal(document.activeElement);
+
+      // If down key is pressed on last toggle focus should return to first
+      toggles[1].dispatchEvent(upKeyEvent);
+      expect(toggles[0]).equal(document.activeElement);
     });
   });
 });

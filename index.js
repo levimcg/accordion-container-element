@@ -1,5 +1,5 @@
 /**!
- * accordion-container-element - 0.1.0
+ * accordion-container-element - 0.1.1
  * Copyright (C) 2019 Levi McGranahan
  * MIT License
  */

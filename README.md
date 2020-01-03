@@ -1,13 +1,15 @@
 # Accordion Container Element
 An accessible [Custom Element](https://developer.mozilla.org/en-US/docs/Web/Web_Components/Using_custom_elements) wrapper that adds accordion functionality with keyboard support to a group of headings and panels.
 
+✨[**See a demo on CodePen**](https://codepen.io/levimcg/pen/ZEYapRY)✨
+
+## Overview 
 - ✅ Follows progressive enhancement best practices. E.g. if `customElements` aren't supported, content falls back to headings and text/panel content.
 - ✅ Follows the [ARIA Authoring Practices recommendations for accordions](https://w3c.github.io/aria-practices/#accordion).
-
-Inspired by Github's [tab-container-element](https://github.com/github/tab-container-element). 
+- 🙌 Inspired by GitHub's [tab-container-element](https://github.com/github/tab-container-element). 
 
 ## Using the Accordion Container Element
-If you want to use it inside a JS module, you can import the accordion container. The accordion container element defines itself using `windown.customElements.define()`, so you will not need to use any kind of named import.
+The accordion container is published to npm. If you want to use it inside a JS module, you can install and import the accordion container. The accordion container element defines itself using `customElements.define()`, so you will not need to use any kind of named import.
 
 ```js
 import 'accordion-container-element';
@@ -17,6 +19,9 @@ or, you can use it in a regular script tag with the `module` attribute.
 
 ```html
 <script type="module" src="path-to/accordion-container/index.js"></script>
+
+<!-- or from a CDN like Unpkg: -->
+<script type="module" scr="https://unpkg.com/accordion-container-element@latest/index.js?module">
 ```
 
 ## Accordion markup

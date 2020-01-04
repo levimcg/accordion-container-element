@@ -1,7 +1,7 @@
 # Accordion Container Element
 An accessible [Custom Element](https://developer.mozilla.org/en-US/docs/Web/Web_Components/Using_custom_elements) wrapper that adds accordion functionality with keyboard support to a group of headings and panels.
 
-![GitHub Workflow Status branch](https://img.shields.io/github/workflow/status/levimcg/accordion-container-element/Node CI/master?label=build)
+![GitHub Workflow Status branch](https://img.shields.io/github/workflow/status/levimcg/accordion-container-element/Node%20CI/master?label=build)
 ![npm](https://img.shields.io/npm/v/accordion-container-element)
 
 ✨[**See a demo on CodePen**](https://codepen.io/levimcg/pen/ZEYapRY)✨

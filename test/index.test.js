@@ -1,4 +1,4 @@
-import { html, fixture, expect, oneEvent, elementUpdated } from '@open-wc/testing';
+import { html, fixture, expect } from '@open-wc/testing';
 
 import '../index.js';
 
@@ -28,7 +28,7 @@ describe('Accordion container element', () => {
     
     it('Is rendered to the page', async () => {
       const el = await fixture(defaultFixutre);
-      expect(el).to.be.visible;
+      expect(el).visible;
     });
   });
 
@@ -37,7 +37,7 @@ describe('Accordion container element', () => {
       const el = await fixture(defaultFixutre);
 
       const button = el.querySelector('[data-summary] > button');
-      expect(button.textContent).to.equal('Panel one');
+      expect(button.textContent).equal('Panel one');
     });
     
     it('Should upgrade panels with hidden attribute', async () => {

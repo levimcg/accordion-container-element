@@ -1,6 +1,6 @@
 {
   "name": "accordion-container-element",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "A generic Custom Element wrapper that turns some headings and other content into an accordion",
   "main": "index.js",
   "module": "index.js",

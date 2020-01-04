@@ -4,12 +4,11 @@ An accessible [Custom Element](https://developer.mozilla.org/en-US/docs/Web/Web_
 ![GitHub Workflow Status branch](https://img.shields.io/github/workflow/status/levimcg/accordion-container-element/Node%20CI/master?label=build)
 ![npm](https://img.shields.io/npm/v/accordion-container-element)
 
-✨[**See a demo on CodePen**](https://codepen.io/levimcg/pen/ZEYapRY)✨
-
 ## Overview 
 - ✅ Follows progressive enhancement best practices. E.g. if `customElements` aren't supported, content falls back to headings and text/panel content.
 - ✅ Follows the [ARIA Authoring Practices recommendations for accordions](https://w3c.github.io/aria-practices/#accordion).
-- 🙌 Inspired by GitHub's [tab-container-element](https://github.com/github/tab-container-element). 
+- 🙌 Inspired by GitHub's [tab-container-element](https://github.com/github/tab-container-element).
+- ✨[**See a demo on CodePen**](https://codepen.io/levimcg/pen/ZEYapRY)✨
 
 ## Using the Accordion Container Element
 The accordion container is published to npm. To install it in your project, run:

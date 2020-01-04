@@ -6,7 +6,7 @@
   "module": "index.js",
   "scripts": {
     "start": "es-dev-server --app-index demo/index.html --node-resolve --open --watch",
-    "test": "npx karma start --coverage",
+    "test": "npx karma start",
     "test:watch": "karma start --auto-watch=true --single-run=false"
   },
   "author": "Levi McGranahan",

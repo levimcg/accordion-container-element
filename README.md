@@ -87,8 +87,6 @@ To run all test run:
 npm run test
 ```
 
-The default test command will generate a coverage report at `./coverage/index.html` where you can review test coverage.
-
 ### Test watch mode
 To run test in watch mode, run:
 

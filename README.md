@@ -9,13 +9,19 @@ An accessible [Custom Element](https://developer.mozilla.org/en-US/docs/Web/Web_
 - 🙌 Inspired by GitHub's [tab-container-element](https://github.com/github/tab-container-element). 
 
 ## Using the Accordion Container Element
-The accordion container is published to npm. If you want to use it inside a JS module, you can install and import the accordion container. The accordion container element defines itself using `customElements.define()`, so you will not need to use any kind of named import.
+The accordion container is published to npm. To install it in your project, run:
+
+```bash
+npm install accordion-container-element
+```
+
+If you want to use it inside a JS module, you can import the accordion container. The accordion container element defines itself using `customElements.define()`, so you will not need to use any kind of named import.
 
 ```js
 import 'accordion-container-element';
 ```
 
-or, you can use it in a regular script tag with the `module` attribute.
+You can use it in a regular script tag with the `module` attribute.
 
 ```html
 <script type="module" src="path-to/accordion-container/index.js"></script>

@@ -77,3 +77,23 @@ To start a local development server that serves the `demo/` folder and watches f
 ```bash
 npm start
 ```
+
+### Tests
+This project uses the very excellent [Open Web Components testing recommendations](https://open-wc.org/testing/).
+
+To run all test run:
+
+```bash
+npm run test
+```
+
+The default test command will generate a coverage report at `./coverage/index.html` where you can review test coverage.
+
+### Test watch mode
+To run test in watch mode, run:
+
+```bash
+npm run test:watch
+```
+
+This will watch all `*.test.js` files and automatically run tests every time a file changes.
